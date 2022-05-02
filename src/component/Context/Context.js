@@ -14,8 +14,6 @@ class Context extends React.Component{
     this.setState({isChange: !this.state.isChange})
     console.log(this.state.isChange);
   }
-    
-  
 
   render(){
     
@@ -26,10 +24,12 @@ class Context extends React.Component{
             const {backgroundBlack,colorWhite,colorBlack,backgroundBlue, text} = style;                      
             return (
               <div>
-                <h2 style={this.state.isChange?
-                {background: backgroundBlack, color: colorWhite}
-                : {background: backgroundBlue, color: colorBlack}
-              }>{text}</h2>
+                <h2 style={this.state.isChange
+                  ?{background: backgroundBlack, color: colorWhite}
+                  :{background: backgroundBlue, color: colorBlack}
+                }>
+                  {text}
+                </h2>
                 <button onClick={this.changeColor}>Change</button>
               </div>
             )
